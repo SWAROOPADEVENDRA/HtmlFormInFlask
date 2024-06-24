@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>webforms in Flask</h1>
+       <form method="POST">
+        <!-- we can use as_p it will give the empty page.because,flask cannot handle 
+         the data directly -->
+         {{ENDO.as_p}}
+        <!-- We can get the data in flask,give name and label  -->
+         {{ENDO.Sname.label}}
+         {{ENDO.Sname}}
+
+         <br>
+         {{ENDO.Password.label}}
+         {{ENDO.Password}}
+         <br>
+         <!-- Submit is a button so,we cannot use the label -->
+         {{ENDO.Submit}}
+       </form>
+    </center>
+</body>
+</html>
